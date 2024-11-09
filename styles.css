@@ -1,0 +1,72 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box-header {
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f9;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.box {
+    width: 300px;
+    padding: 20px;
+    background-color: #f5f8f5;
+    border: 2px solid #0c0a0a;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.box .content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+.options {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.box.expanded {
+    background-color: #e0f7fa;
+    border-color: #00bcd4;
+}
+
+.box.expanded .options {
+    display: flex;
+}
+.box .toggle-message {
+    display: block; /* Show message by default */
+}
+
+.box.expanded .toggle-message {
+    display: none; /* Hide message when the box is expanded */
+}
+.selected-info {
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+}
